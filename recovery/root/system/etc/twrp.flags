@@ -1,0 +1,39 @@
+# Super partitions 
+/system_image	emmc		/dev/block/mapper/system							flags=backup=1;flashimg;wipeingui;display="System Image"
+/vendor_image	emmc		/dev/block/mapper/vendor							flags=backup=1;flashimg;wipeingui;display="Vendor Image"
+/product_image	emmc		/dev/block/mapper/product							flags=backup=1;flashimg;wipeingui;display="Product Image"
+/odm_image	emmc		/dev/block/mapper/odm								flags=backup=1;flashimg;wipeingui;display="Odm Image"
+
+# Prism and optics
+/prism		ext4		/dev/block/by-name/prism							flags=backup=1;flashimg;wipeingui;display="Prism"
+/optics		ext4		/dev/block/by-name/optics							flags=backup=1;flashimg;wipeingui;display="Optics"
+
+# Data Storage
+/metadata	ext4		/dev/block/by-name/md_udc							flags=backup=1;flashimg;wipeingui;display="Metadata"
+/cache  	ext4		/dev/block/by-name/cache							flags=backup=1;flashimg;wipeingui;display="Cache"
+/data   	f2fs		/dev/block/by-name/userdata							flags=backup=1;flashimg;wipeingui;display="Data
+/keydata  	ext4		/dev/block/by-name/keydata							flags=backup=1;flashimg;wipeingui;display="Keydata"
+/keyrefuge   	ext4		/dev/block/by-name/keyrefuge							flags=backup=1;flashimg;wipeingui;display="Keyrefuge"
+/misc   	emmc   	   	/dev/block/by-name/misc   	   	   	   	   	   	   	flags=backup=1;flashimg;display="Misc"
+
+# Flashable
+/recovery   	emmc   	   	/dev/block/by-name/recovery   	   	   	   	   	   	   	flags=backup=1;flashimg;display="Recovery"
+/boot   	emmc   	   	/dev/block/by-name/boot   	   	   	   	   	   	   	flags=backup=1;flashimg;display="Boot"
+/dtbo   	emmc   	   	/dev/block/by-name/dtbo   	   	   	   	   	   	   	flags=backup=1;flashimg;display="Dtbo"
+/vbmeta   	emmc   	   	/dev/block/by-name/vbmeta   	   	   	   	   	   	   	flags=backup=1;flashimg;display="Vbmeta"
+
+# Baseband
+/md1img   	emmc   	   	/dev/block/by-name/md1img   	   	   	   	   	   	   	flags=backup=1;flashimg;display="Baseband"
+
+# Data Storage - external
+/external_sd	vfat		/dev/block/mmcblk1p1	/dev/block/mmcblk1			flags=display="Micro SD Card";storage;wipeingui;removable
+/usb_otg		auto		/dev/block/sda1 		/dev/block/sda				flags=display="USB OTG";storage;wipeingui;removable
+
+# Very important data
+/protect_f		ext4		/dev/block/by-name/protect1							flags=backup=1;flashimg;display="Protect1"
+/protect_s		ext4		/dev/block/by-name/protect2							flags=backup=1;flashimg;display="Protect2"
+/nvdata	   	ext4		/dev/block/by-name/nvdata							flags=backup=1;flashimg;display="Nvdata"
+/efs	   	ext4	   	/dev/block/by-name/efs	   		   		   		   	flags=backup=1;flashimg;display="EFS"
+/seccfg	   	emmc	   	/dev/block/by-name/seccfg	   		   		   		   	flags=backup=1;flashimg;display="Sec CFG"
+/sec_efs	   	ext4	   	/dev/block/by-name/sec_efs	   		   		   		   	flags=backup=1;flashimg;display="Sec EFS"
+/nvram	   	emmc 		/dev/block/by-name/nvram							flags=backup=1;flashimg;display="Nvram"
